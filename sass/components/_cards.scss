@@ -35,6 +35,22 @@
           $color-secoundary-dark
         );
       }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
     }
   }
 
@@ -140,5 +156,29 @@
         border-bottom: 0.8px solid lightgrey;
       }
     }
+  }
+
+  //styling back side card
+  &__cta {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__price-box {
+    height: 75%;
+    padding: 4rem;
+    text-transform: uppercase;
+    color: $color-light;
+    font-weight: 300;
+  }
+
+  &__price-only {
+    margin: 4rem 0;
+    font-size: 2.5rem;
+  }
+
+  &__price-value {
+    font-size: 8rem;
   }
 }
