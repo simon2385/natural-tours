@@ -1,0 +1,144 @@
+.card {
+  //functionality
+
+  -moz-perspective: 150rem;
+  -webkit-perspective: 150rem;
+  perspective: 150rem;
+  position: relative;
+  height: 54rem;
+
+  &__side {
+    transition: all 0.8s ease-in-out;
+    position: absolute;
+    height: 54rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden; //backface-visibility hide the back part of an element
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.25);
+
+    &--front {
+      background-color: $color-light;
+    }
+
+    &--back {
+      transform: rotateY(-180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secoundary-light,
+          $color-secoundary-dark
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  // Front side card styling
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secoundary-dark,
+          $color-secoundary-light
+        ),
+        url(../imgs/campana-mini.jpeg);
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-dark,
+          $color-primary-light
+        ),
+        url(../imgs/bocas-mini.jpeg);
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-dark,
+          $color-tertiary-light
+        ),
+        url(../imgs/potobelo-mini.jpeg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-grey-lg-1;
+    position: absolute;
+    top: 14rem;
+    right: 2rem;
+    text-align: right;
+    width: 50%;
+
+    &--3 {
+      width: 57%;
+    }
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone; //each piece of the box have a padding like an independent box
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-secoundary-dark,
+        $color-secoundary-light
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary-dark,
+        $color-primary-light
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-tertiary-dark,
+        $color-tertiary-light
+      );
+    }
+  }
+
+  &__details {
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 4rem auto 0 auto;
+    }
+
+    li {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem;
+
+      &:not(:last-child) {
+        border-bottom: 0.8px solid lightgrey;
+      }
+    }
+  }
+}

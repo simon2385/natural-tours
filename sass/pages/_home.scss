@@ -1,0 +1,26 @@
+.section-about {
+  background-color: $color-grey-lg-1;
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../imgs/rowan-heuvel-U6t80TWJ1DM-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+
+  transform: skewY(-3.8deg);
+  margin-top: -8rem;
+}
+
+.section-tours {
+  background-color: $color-grey-lg-1;
+  margin-top: -5rem;
+  padding-top: 13rem;
+}
