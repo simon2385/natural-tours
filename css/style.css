@@ -113,7 +113,7 @@ body {
 .u-padding-top-big {
   padding-top: 8rem; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   position: relative;
   text-decoration: none;
@@ -121,12 +121,15 @@ body {
   border-radius: 100px;
   display: inline-block;
   transition: all 0.2s;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
 
-.btn:hover {
+.btn:hover, .btn:focus {
+  outline: none;
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2 rgba(0, 0, 0, 0.35); }
-  .btn:hover::after {
+  .btn:hover::after, .btn:focus::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
@@ -336,20 +339,72 @@ body {
   border: none;
   border-bottom: 3px solid transparent;
   width: 85%;
-  display: block; }
+  display: block;
+  transition: all 0.7s; }
   .form__input:focus {
     outline: none;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-bottom: 3px solid #086468; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #1bbec3; }
   .form__input::-webkit-input-placeholder {
     color: #999; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
 
 .form__label {
   font-size: 1.2rem;
   font-weight: 700;
   margin-left: 2rem;
   margin-top: 0.7rem;
-  display: block; }
+  display: block;
+  transition: all 0.8s; }
+
+.form__radio-group {
+  padding-top: 2rem;
+  width: 45%;
+  display: inline-block; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 5rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #086468;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: -0.4rem;
+  left: 0; }
+  .form__radio-button::after {
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #086468;
+    opacity: 0;
+    transition: opacity 0.2s; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
+.form__group-submit {
+  margin-top: 3rem; }
 
 .story {
   width: 75%;
