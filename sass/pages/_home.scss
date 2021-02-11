@@ -26,6 +26,35 @@
 }
 
 .section-stories {
-  background-color: $color-grey-lg-1;
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-book {
   padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-dark,
+    $color-primary-light
+  );
+}
+
+.book {
+  height: 50rem;
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-light, 0.9) 0%,
+      rgba($color-light, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../imgs/book-img.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 2rem 4rem rgba($color-black, 0.5);
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+  }
 }

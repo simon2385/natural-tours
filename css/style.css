@@ -107,6 +107,12 @@ body {
 .u-margin-top-big {
   margin-top: 8rem; }
 
+.u-margin-top-medium {
+  margin-top: 4rem; }
+
+.u-padding-top-big {
+  padding-top: 8rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   position: relative;
@@ -226,7 +232,7 @@ body {
     font-size: 2.8rem;
     font-weight: 300;
     text-transform: uppercase;
-    color: #e4e4e4;
+    color: #cacaca;
     position: absolute;
     top: 14rem;
     right: 2rem;
@@ -317,11 +323,39 @@ body {
   -webkit-background-clip: text;
   color: transparent; }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 2rem;
+  color: inherit;
+  border-radius: 2px;
+  background-color: rbga(#f1eeee, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 85%;
+  display: block; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #086468; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block; }
+
 .story {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
-  background-color: #e4e4e4;
+  background-color: rgba(202, 202, 202, 0.5);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -365,6 +399,19 @@ body {
     scale: 1.2;
     transform: translateX(-2.7rem);
     filter: blur(2px); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .header {
   height: 95vh;
@@ -416,7 +463,7 @@ body {
     width: calc( 3 * ((100% - 18rem) / 4) + (6rem * 2)); }
 
 .section-about {
-  background-color: #e4e4e4;
+  background-color: #cacaca;
   padding: 25rem 0;
   margin-top: -20vh; }
 
@@ -429,10 +476,25 @@ body {
   margin-top: -8rem; }
 
 .section-tours {
-  background-color: #e4e4e4;
+  background-color: #cacaca;
   margin-top: -5rem;
   padding: 13rem 0 8rem 0; }
 
 .section-stories {
-  background-color: #e4e4e4;
-  padding: 15rem 0; }
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden; }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #086468, #78cccf); }
+
+.book {
+  height: 50rem;
+  background-image: linear-gradient(105deg, rgba(241, 238, 238, 0.9) 0%, rgba(241, 238, 238, 0.9) 50%, transparent 50%), url(../imgs/book-img.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5); }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
