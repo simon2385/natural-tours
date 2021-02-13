@@ -43,7 +43,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #5d5d5d;
+  color: #424242;
   padding: 3rem;
   box-sizing: border-box; }
 
@@ -139,7 +139,7 @@ body {
 
 .btn--white {
   background-color: #f1eeee;
-  color: #5d5d5d; }
+  color: #424242; }
   .btn--white::after {
     background-color: #f1eeee; }
 
@@ -516,6 +516,44 @@ body {
     width: calc( 2 * ((100% - 18rem) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 18rem) / 4) + (6rem * 2)); }
+
+.footer {
+  background-color: #424242;
+  padding: 10rem 8rem;
+  font-size: 1.5rem;
+  color: #999; }
+  .footer__logo-box {
+    text-align: center; }
+  .footer__logo {
+    width: 10rem;
+    height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #f1eeee;
+    padding-top: 1rem;
+    text-align: center; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #f1eeee;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.4s; }
+  .footer__link:hover, .footer__link:active {
+    color: #424242;
+    background-color: #1bbec3;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    transform: rotate(5deg) scale(1.3); }
+  .footer__copyright {
+    border-top: 1px solid #f1eeee;
+    padding-top: 1rem;
+    text-align: justify; }
 
 .section-about {
   background-color: #cacaca;
