@@ -17,12 +17,20 @@
 
   transform: skewY(-3.8deg);
   margin-top: -8rem;
+
+  @include respond(tab-port) {
+    padding: 15rem 0;
+  }
 }
 
 .section-tours {
   background-color: $color-grey-lg-1;
   margin-top: -7rem;
   padding: 13rem 0 8rem 0;
+
+  @include respond(tab-port) {
+    padding: 10rem 0 5rem 0;
+  }
 }
 
 .section-stories {

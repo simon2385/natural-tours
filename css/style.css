@@ -603,7 +603,8 @@ body {
         margin-bottom: 6rem; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50%; } }
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -647,6 +648,9 @@ body {
     width: 7rem;
     padding-bottom: 6rem;
     height: auto; }
+    @media (max-width: 56.25em) {
+      .footer__logo {
+        padding-bottom: 2rem; } }
   .footer__navigation {
     border-top: 1px solid #f1eeee;
     padding-top: 1rem;
@@ -821,11 +825,17 @@ body {
   background-size: cover;
   transform: skewY(-3.8deg);
   margin-top: -8rem; }
+  @media (max-width: 56.25em) {
+    .section-features {
+      padding: 15rem 0; } }
 
 .section-tours {
   background-color: #cacaca;
   margin-top: -7rem;
   padding: 13rem 0 8rem 0; }
+  @media (max-width: 56.25em) {
+    .section-tours {
+      padding: 10rem 0 5rem 0; } }
 
 .section-stories {
   padding: 10rem 0;

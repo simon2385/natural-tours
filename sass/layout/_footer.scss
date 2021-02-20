@@ -17,6 +17,10 @@
     width: 7rem;
     padding-bottom: 6rem;
     height: auto;
+
+    @include respond(tab-port) {
+      padding-bottom: 2rem;
+    }
   }
 
   &__navigation {
