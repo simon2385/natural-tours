@@ -7,12 +7,30 @@
   background-color: rgba($color-black, 0.8);
   z-index: 3000;
 
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
   &__content {
     @include absCenter;
     width: 75%;
     background-color: $color-light;
     box-shadow: 0 2rem 4rem rbga($color-black, 0.2);
     display: table;
+    transition: all 0.5s 0.2s;
+
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
   }
 
   &__left {
@@ -45,5 +63,23 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-drark;
+      position: absolute;
+      top: 2.5rem;
+      right: 5rem;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 5rem;
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      color: $color-primary-dark;
+    }
   }
 }

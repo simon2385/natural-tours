@@ -475,7 +475,16 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 3000; }
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s; }
+  .popup:target {
+    visibility: visible;
+    opacity: 1; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -484,7 +493,10 @@ body {
     width: 75%;
     background-color: #f1eeee;
     box-shadow: 0 2rem 4rem rbga(black, 0.2);
-    display: table; }
+    display: table;
+    transition: all 0.5s 0.2s;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0); }
   .popup__left {
     width: 33.3333%;
     height: 100%;
@@ -507,6 +519,17 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+  .popup__close:link, .popup__close:visited {
+    color: #424242;
+    position: absolute;
+    top: 2.5rem;
+    right: 5rem;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 5rem;
+    transition: all 0.5s; }
+  .popup__close:hover {
+    color: #086468; }
 
 .header {
   height: 95vh;
@@ -719,7 +742,7 @@ body {
 
 .section-tours {
   background-color: #cacaca;
-  margin-top: -5rem;
+  margin-top: -7rem;
   padding: 13rem 0 8rem 0; }
 
 .section-stories {
