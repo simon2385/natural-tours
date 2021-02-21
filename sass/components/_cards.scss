@@ -274,4 +274,11 @@
       font-size: 5rem;
     }
   }
+
+  @include respond(phone-small) {
+    &__heading {
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+  }
 }
