@@ -1,3 +1,14 @@
+.row--footer {
+  width: 100rem;
+  @include respond(tab-land) {
+    width: 91rem;
+  }
+
+  @include respond(phone) {
+    width: 33rem;
+  }
+}
+
 .footer {
   background-color: $color-drark;
   padding: 10rem 8rem;
@@ -6,6 +17,7 @@
 
   @include respond(tab-land) {
     padding: 8rem 0;
+    font-size: 1.2rem;
   }
 
   &__logo-box {
