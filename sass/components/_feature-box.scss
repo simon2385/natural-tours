@@ -11,6 +11,15 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.25);
   transition: transform 0.3s;
 
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
+  @include respond(phone) {
+    width: 70%;
+    margin: 0 auto;
+  }
+
   &:hover {
     transform: translateY(-1.5rem) scale(1.03);
   }

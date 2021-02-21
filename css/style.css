@@ -313,6 +313,67 @@ body {
     font-size: 2.5rem; }
   .card__price-value {
     font-size: 8rem; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
+      background-color: #f1eeee; }
+      .card__side {
+        transition: all 0.8s ease-in-out;
+        position: relative;
+        height: auto;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+      .card:hover .card__side--front {
+        transform: rotateY(0deg); }
+      .card__cta {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0; }
+      .card__price-box {
+        height: 50%;
+        padding: 1rem;
+        text-transform: uppercase;
+        color: #f1eeee;
+        font-weight: 300; }
+      .card__price-only {
+        margin: 0;
+        font-size: 2rem; }
+      .card__price-value {
+        font-size: 5rem; } }
+  @media (max-width: 37.5em) {
+    .card {
+      width: 80%;
+      margin: 0 auto; }
+      .card__side {
+        transition: all 0.8s ease-in-out;
+        position: relative;
+        height: auto;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+      .card:hover .card__side--front {
+        transform: rotateY(0deg); }
+      .card__cta {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0; }
+      .card__price-box {
+        height: 50%;
+        padding: 1rem;
+        text-transform: uppercase;
+        color: #f1eeee;
+        font-weight: 300; }
+      .card__price-only {
+        margin: 0;
+        font-size: 2rem; }
+      .card__price-value {
+        font-size: 5rem; } }
 
 .composition {
   position: relative; }
@@ -324,15 +385,41 @@ body {
     z-index: 10;
     transition: all 0.2s;
     outline-offset: 2rem; }
+    @media (max-width: 56.25em) {
+      .composition__photo {
+        float: left;
+        position: relative;
+        width: 50%; } }
+    @media (max-width: 37.5em) {
+      .composition__photo {
+        width: 40%; } }
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
+      @media (max-width: 56.25em) {
+        .composition__photo--p1 {
+          top: -1rem; } }
+      @media (max-width: 37.5em) {
+        .composition__photo--p1 {
+          left: 38px; } }
     .composition__photo--p2 {
       right: 0;
       top: 2rem; }
+      @media (max-width: 56.25em) {
+        .composition__photo--p2 {
+          right: 70px;
+          top: 10rem; } }
+      @media (max-width: 37.5em) {
+        .composition__photo--p2 {
+          right: 16px;
+          top: 8rem; } }
     .composition__photo--p3 {
       left: 20%;
       top: 10rem; }
+      @media (max-width: 56.25em) {
+        .composition__photo--p3 {
+          left: 0;
+          top: -16rem; } }
     .composition__photo:hover {
       outline: 1.5rem solid #1bbec3;
       transform: scale(1.05);
@@ -352,6 +439,13 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
   transition: transform 0.3s; }
+  @media (max-width: 56.25em) {
+    .feature-box {
+      padding: 2rem; } }
+  @media (max-width: 37.5em) {
+    .feature-box {
+      width: 70%;
+      margin: 0 auto; } }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
@@ -452,6 +546,14 @@ body {
   padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0deg); } }
   .story:not(:last-child) {
     margin-bottom: 8rem; }
   .story__shape {
@@ -462,12 +564,19 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative; }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: skewX(0deg);
+        margin: 2rem; } }
   .story__img {
     height: 15rem;
     transform: translateX(-3rem);
     transition: all 1s; }
   .story__text {
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        transform: skewX(0deg); } }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -644,6 +753,9 @@ body {
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .footer__logo-box {
+        margin-bottom: 4rem !important; } }
   .footer__logo {
     width: 7rem;
     padding-bottom: 6rem;
@@ -817,6 +929,9 @@ body {
   background-color: #cacaca;
   padding: 25rem 0;
   margin-top: -20vh; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 22rem 0 12rem 0; } }
 
 .section-features {
   padding: 20rem 0;
@@ -827,7 +942,7 @@ body {
   margin-top: -8rem; }
   @media (max-width: 56.25em) {
     .section-features {
-      padding: 15rem 0; } }
+      padding: 10rem 0 10rem 0; } }
 
 .section-tours {
   background-color: #cacaca;
@@ -835,16 +950,22 @@ body {
   padding: 13rem 0 8rem 0; }
   @media (max-width: 56.25em) {
     .section-tours {
-      padding: 10rem 0 5rem 0; } }
+      padding: 13rem 0 5rem 0; } }
 
 .section-stories {
   padding: 10rem 0;
   position: relative;
   overflow: hidden; }
+  @media (max-width: 56.25em) {
+    .section-stories {
+      padding: 5rem 0 5rem 0; } }
 
 .section-book {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #086468, #78cccf); }
+  @media (max-width: 56.25em) {
+    .section-book {
+      padding: 8rem 0; } }
 
 .book {
   height: 50rem;
@@ -852,6 +973,9 @@ body {
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5); }
+  @media (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(241, 238, 238, 0.9) 0%, rgba(241, 238, 238, 0.9) 70%, transparent 70%), url(../imgs/book-img.jpg); } }
   .book__form {
     width: 50%;
     padding: 6rem; }
