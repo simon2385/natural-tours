@@ -11,8 +11,13 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.25);
   transition: transform 0.3s;
 
+  @include respond(tab-middle) {
+    height: 353.55px;
+  }
+
   @include respond(tab-port) {
     padding: 2rem;
+    height: auto;
   }
 
   @include respond(phone) {

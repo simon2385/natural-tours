@@ -40,6 +40,11 @@ Break points arguments
       @content;
     }
   }
+  @if $breakpoint == tab-middle {
+    @media (max-width: 62.5em) {
+      @content;
+    }
+  }
   @if $breakpoint == tab-land {
     @media (max-width: 75em) {
       @content;

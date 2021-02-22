@@ -5,9 +5,13 @@
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
 
-    @include respond(tab-port) {
+    @include respond(tab-middle) {
       margin-bottom: $gutter-vertical-small;
     }
+  }
+
+  @include respond(tab-middle) {
+    max-width: 101rem;
   }
 
   @include respond(tab-port) {

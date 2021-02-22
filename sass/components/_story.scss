@@ -27,12 +27,19 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    // SHAPE OUTSIDE  controls how content will wrap around a floated element’s bounding-box
-    shape-outside: circle(50% at 50% 50%);
-    // the 1st value is the size of the circle (radius) 2nd and 3rd values are the position of the cercle Y and X
-    // This only works if i have the width, hight and the element floated
-    clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
     transform: translateX(-3rem) skewX(12deg);
+    border-radius: 50%;
+
+    @supports (clip-path: circle(0 at 0 0)) {
+      clip-path: circle(50% at 50% 50%);
+      border-radius: none;
+      // SHAPE OUTSIDE  controls how content will wrap around a floated element’s bounding-box
+      shape-outside: circle(50% at 50% 50%);
+      // the 1st value is the size of the circle (radius) 2nd and 3rd values are the position of the cercle Y and X
+      // This only works if i have the width, hight and the element floated
+    }
+
     position: relative;
 
     @include respond(phone) {
